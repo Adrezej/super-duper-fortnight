@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+{% include 'message.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+
+        /* Добавлен стиль для отображения сообщения в центре экрана */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        form {
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Новые стили для отображения сообщения */
+
+
+    </style>
+
+    <title>Phone Number Form</title>
+</head>
+<body>
+    <h1>Enter Your Phone Number and Name</h1>
+
+    <form action="/" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="\+\d{3}\d{2}\d{3}\d{3}" placeholder="+37367755314" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Styles for message display */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .message-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .message {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            max-width: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        {% if message %}
+        <div class="message">
+            {{ message }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
